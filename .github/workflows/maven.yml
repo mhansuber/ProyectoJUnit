@@ -26,7 +26,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build and Run Tests
-      run: mvn test --batch-mode --fail-at-end -DtestFailureIgnore=true
+      run: mvn test --batch-mode --fail-at-end -Dmaven.test.failure.ignore=true
     - name: Report
       uses: dorny/test-reporter@v1
       if: always()
